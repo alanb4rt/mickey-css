@@ -1,0 +1,363 @@
+:root {
+    --main-color: #f5c6ac;
+}
+
+html {
+    font-family: Arial;
+}
+
+body {
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.cadre {
+    padding: 3vw;
+}
+
+    /* FORME */
+
+#forme {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.ctn-oreille {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.oreille_G, .oreille_D {
+    width: 12vw;
+    height: 12vw;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.oreille_G {
+    margin-right: 3vw;
+}
+
+.oreille_D {
+    margin-left: 3vw;
+}
+
+.tete {
+    width: 21vw;
+    height: 19vw;
+    background-color: black;
+    border-radius: 50%;
+    margin-top: -4vw;
+}
+
+    /* VISAGE */
+
+#visage {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -18vw;
+}
+
+.front {
+    display: flex;
+    flex-direction: row;
+}
+
+.front_G, .front_D {
+    width: 9vw;
+    height: 15vw;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    margin-top: 0vw;
+}
+
+.front_G {
+    margin-right: -2vw;
+    transform: rotate(-2deg);
+}
+
+.front_D {
+    margin-left: -2vw;
+    transform: rotate(2deg);
+}
+
+.machoire {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5vw;
+}
+
+.joue_G, .joue_D {
+    width: 10vw;
+    height: 6vw;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    margin-top: 2vw;
+}
+
+.joue_G {
+    transform: rotate(35deg);
+}
+
+.joue_D {
+    transform: rotate(-35deg);
+}
+
+.ctn-menton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0vw;
+    height: 0vw;
+}
+
+.menton {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    margin-top: 2.5vw;
+}
+
+    /* ELEMENTS*/
+
+#elements {
+    z-index: 3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -14vw;
+}
+
+.ctn-yeux,
+.ctn-haut-nez,
+.nez {
+    z-index: 10;
+}
+
+.ctn-yeux {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0vw;
+}
+
+.yeux_G, .yeux_D {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 2.5vw;
+    height: 6.5vw;
+    border-radius: 50%;
+    background-color: white;
+    border: 0.2vw solid black;
+    margin: auto 0.3vw;
+}
+
+.yeux_G {
+    transform: rotate(-2deg);
+}
+
+.yeux_D {
+    transform: rotate(2deg);
+}
+
+.pupille_G, .pupille_D {
+    width: 1.5vw;
+    height: 2.5vw;
+    margin-bottom: -0.1vw;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.pupille_G {
+    margin-right: -0.3vw;
+}
+
+.pupille_D {
+    margin-left: -0.3vw;
+}
+
+.ctn-haut-nez {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -0.2vw;
+}
+
+.haut-nez_haut {
+    width: 8vw;
+    height: 3vw;
+    background-color: black;
+    clip-path: ellipse(50% 80% at 50% 80%);
+}
+
+.haut-nez_bas {
+    width: 10vw;
+    height: 3vw;
+    background-color: var(--main-color);
+    margin-top: -2.7vw;
+    clip-path: ellipse(50% 100% at 50% 100%);
+}
+
+.nez {
+    width: 6vw;
+    height: 5vw;
+    background-color: black;
+    clip-path: ellipse(50% 35% at 50% 50%);
+    margin-top: -3.5vw;
+}
+
+.ctn-sourire {
+    position: relative;
+    width: 16vw;
+    height: 7.2vw;
+    margin-top: -3vw;
+}
+
+.sourire-coins {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sourire-coin_G, 
+.sourire-coin_D {
+    width: 3vw;
+    height: 2vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.sourire-coin_G {
+    rotate: -18deg;
+}
+
+.sourire-coin_D {
+    rotate: 18deg;
+}
+
+.sourire-coin_G > *,
+.sourire-coin_D > * {
+    position: absolute;
+    inset: 0;
+}
+
+.haut-sourire-coin-forme {
+    height: 100%;
+    background-color: black;
+    clip-path: ellipse(45% 50% at 50% 50%);
+}
+
+.bas-sourire-coin-forme {
+    height: 110%;
+    background-color: var(--main-color);
+    margin-top: 0.2vw;
+    clip-path: ellipse(50% 45% at 50% 50%);
+}
+
+.ctn-levres {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 65%;
+    transform: rotate3d(1, 0, 0, -30deg);
+}
+
+.haut-levre,
+.bas-levre {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 420%;
+}
+
+.haut-levre {
+    z-index: 5;
+    background-color: var(--main-color);
+    clip-path: ellipse(50% 50% at 50% 50%);
+    transform: translateY(-0.3vw);
+}
+
+.bas-levre {
+    background-color: black;
+    clip-path: ellipse(50% 50% at 50% 50%);
+}
+
+.ctn-bouche {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+}
+
+.bouche {
+    position: absolute;
+    overflow: hidden;
+    background: black;
+    bottom: 0;
+    width: 45%;
+    height: 300%;
+    border-radius: 50%;
+    border: 0.2vw solid black;
+}
+
+.langue_G,
+.langue_D {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.langue_G {
+    background-color: #ee3424;
+    width: 90%;
+    height: 4vw;
+    border-radius: 50%;
+    translate: -0.5vw 2.8vw;
+    rotate: 50deg;
+}
+
+.langue_D {
+    overflow: hidden;
+    width: 3vw;
+    height: 1.8vw;
+    rotate: 58deg;
+}
+
+.langue_D-forme {
+    position: absolute;
+    top: 0;
+    background-color: #ee3424;
+    width: 100%;
+    height: 4vw;
+    border-radius: 50%;
+}
